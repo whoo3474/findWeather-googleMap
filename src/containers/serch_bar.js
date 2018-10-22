@@ -16,9 +16,13 @@ export default class SearchBar extends Component{
     console.log(event.target.value);
   }
 
+  onFormSubmit (event) {
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input 
           placeholder="검색하는 도시의 5일간의 기상정보를 가져옵니다."
           className="form-control"
