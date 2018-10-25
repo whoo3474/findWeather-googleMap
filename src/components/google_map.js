@@ -1,13 +1,13 @@
 import React from 'react';
-import { GoogleMapLoader, GoogleMap} from 'react-google-maps';
+import GoogleMapReact from 'google-map-react';
 
 export default (props) =>  {
+  console.log(props);
   return (
-    <GoogleMapLoader 
-      containerElement={ <div style={{height:'100%'}} /> }
-      googleMapElement={
-        <GoogleMap defaultZoom={12} defaultCenter={{lat : props.lat, lng:props.lon}} />
-      }
-    />
+    <div style={{ height: '150px', width:'200px'}}>
+      <GoogleMapReact 
+        defaultZoom={12} 
+        defaultCenter={{lat : props.lat, lng:props.lon}} />
+    </div>
   );
 }
